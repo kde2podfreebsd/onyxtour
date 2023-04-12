@@ -470,6 +470,10 @@ body {
     row-gap: 18px;
 }
 
+.dates__bottom {
+    padding-top: 1px;
+}
+
 .date.town__bottom__date {
     display: none;
 }
