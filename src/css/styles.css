@@ -91,6 +91,9 @@ body {
 }
 
 .header__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 48px;
     width: 372px;
     background-color: #FF0000;
@@ -393,7 +396,7 @@ body {
     line-height: 28px;
     text-align: center;
     padding: 0 20px;
-    color: #929292;
+    color: #fff;
 }
 
 @media (max-width: 990px) {
