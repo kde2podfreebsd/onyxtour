@@ -1,0 +1,675 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: 'Halvar Breitschrift';
+    src: url("../fonts/regular.ttf");
+  }
+  
+  @font-face {
+    font-weight: 700;
+    font-family: 'Halvar Breitschrift';
+    src: url("../fonts/bold.ttf");
+  }
+
+  @font-face {
+    font-weight: 900;
+    font-family: 'Halvar Breitschrift';
+    src: url("../fonts/bbold.ttf");
+  }
+  
+  @font-face {
+    font-weight: 500;
+    font-family: 'Halvar Breitschrift';
+    src: url("../fonts/medium.ttf");
+  }
+
+
+.container {
+    max-width: 990px;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+.container--big {
+    max-width: 1024px;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header {
+    width: 100%;
+    background-color: #000;
+    height: 750px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.header__body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.header__top {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__bottom {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.header__button {
+    height: 48px;
+    width: 372px;
+    background-color: #FF0000;
+    border-radius: 30px;
+
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.header__button:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+}
+
+.header__column {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 14px;
+   
+}
+
+.header__img {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.header__column__top {
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+
+    text-align: center;
+
+    color: #E20F01;
+}
+
+.header__column__bottom {
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    max-width: 112px;
+}
+
+.header__column__bottom.header__column__bottom--right {
+    max-width: 180px;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+    }
+
+    .header__top {
+        margin-top: -40px;
+        justify-content: center;
+        column-gap: 120px;
+        padding-bottom: 60px;
+    }
+
+    .header__bottom {
+        padding-bottom: 50px;
+    }
+
+    .header__column {
+        height: auto;
+    }
+
+    .header__img {
+        position: relative;
+        height: 50%;
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__top {
+        margin-top: 0;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .header__bottom {
+        padding-bottom: 50px;
+    }
+
+    .header__column__bottom {
+        max-width: 100%;
+    }
+
+    .header__img {
+        height: 350px;
+    }
+
+    .header__button {
+        height: 30px;
+        width: 250px;
+        background-color: #FF0000;
+        border-radius: 20px;
+    
+        font-family: 'Halvar Breitschrift';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 340px) {
+    .header__img {
+        height: 280px;
+    }
+}
+
+
+.banner {
+    width: 100%;
+    background: #0C0C0C;
+}
+
+.banner__body {
+    max-width: 828px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 72px 20px 48px 20px;
+}
+
+.banner__column--left {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.banner__content span {
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+
+.banner_age {
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .banner__content span,
+    .banner_age {
+        font-size: 18px;
+    }
+
+    .banner__column img {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 580px) {
+    .banner__body {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    .banner__column--left {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .banner__content {
+        text-align: center;
+    }
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(90deg, #E20F01
+    0%, #0C0C0C 100%);
+}
+
+.about {
+    padding: 0 20px;
+    padding-top: 72px;
+    padding-bottom: 64px;
+    background: #0C0C0C;
+}
+
+.about__body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.about__title {
+    font-family: 'Halvar Breitschrift';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+
+    color: #FFFFFF;
+    max-width: 852px;
+}
+
+.about__title span {
+    color: #E20F01;
+}
+
+.about__subtitle {
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 46px;
+    text-align: center;
+
+    color: #FFFFFF;
+    max-width: 852px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding-top: 36px;
+        padding-bottom: 32px;
+    }
+
+    .about__title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .about__subtitle {
+        line-height: 32px;
+        font-size: 18px;
+    }
+}
+
+.map {
+    background: #0C0C0C;
+    padding-bottom: 96px;
+    overflow: hidden;
+}
+
+.map__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map__body div {
+    text-align: center;
+    max-width: 616px;
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0 20px;
+    color: #929292;
+}
+
+@media (max-width: 990px) {
+    .map img {
+        transform: scale(0.8);
+    }
+
+    .map__body div {
+        font-size: 18px;
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .map img {
+        transform: scale(0.6);
+    }
+
+    .map__body div {
+        margin-top: -75px;
+    }
+}
+
+@media (max-width: 680px) {
+    .map img {
+        transform: scale(0.4);
+    }
+
+    .map__body div {
+        margin-top: -125px;
+    }
+}
+
+@media (max-width: 400px) {
+    .map img {
+        transform: scale(0.3);
+    }
+}
+
+.tickets {
+    background: #0C0C0C;
+    padding-bottom: 62px;
+}
+
+.tickets__body {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.date {
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+
+.dates {
+    display: flex;
+    flex-direction: column;
+    row-gap: 44px;
+    padding-top: 20px;
+    text-align: right;
+    width: 162px;
+}
+
+.dates__top,
+.dates__bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+.date.town__bottom__date {
+    display: none;
+}
+
+.towns {
+    width: 100%;
+    background: #131313;
+    border-radius: 15px;
+}
+
+.towns__top {
+    padding: 0 20px;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #272727;
+}
+
+.ticket_buy {
+    display: block;
+    width: 102px;
+    height: 28px;
+    text-align: center;
+    align-content: center;
+    background: #FFFFFF;
+    border-radius: 3px;
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+    padding-top: 5px;
+}
+
+.ticket_buy:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+}
+
+.ticket_buy.ticket_buy--red {
+    background: #FF0000;
+}
+
+.town {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.town__name {
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+    
+    
+    color: #C0C0C0;
+}
+
+.town__name.town__name--red {
+    font-weight: 900;
+    color: #FF0000;
+}
+
+.town__club {
+    font-family: 'Halvar Breitschrift';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #969696;
+}
+
+.town__content {
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+}
+
+.town__buttons {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.town__content--bottom.first,
+.town__buttons--bottom.first {
+    padding-top: 20px;
+}
+
+.town__content--bottom.last,
+.town__buttons--bottom.last {
+    padding-bottom: 20px;
+}
+
+.towns__bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.town__buttons.town__buttons--bottom {
+    border-left: 1px solid #272727;
+    padding-left: 20px;
+}
+
+.town__content--bottom,
+.town__buttons--bottom {
+    padding: 9px 0;
+}
+
+@media (max-width: 1000px) {
+    .town__name, .date {
+        font-size: 16px;
+    }
+
+    .town__club {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .ticket_buy {
+        width: 80px;
+        height: 24px;
+        padding-top: 3px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 810px) {
+    .town__club {
+        display: none;
+    }
+
+}
+
+@media (max-width: 610px) {
+    .towns__bottom {
+        padding: 0 10px;
+    }
+
+    .towns__top {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .town__name, .date {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .town__name {
+        width: 100%;
+    }
+
+    .ticket_buy {
+        width: 80px;
+        height: 18px;
+        padding-top: 2px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .tickets__body {
+        column-gap: 10px;
+    }
+
+    .dates {
+        display: none;
+    }
+
+    .date.town__bottom__date {
+        display: flex;
+        width: 100%;
+    }
+
+    .town__content {
+        column-gap: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .town__buttons.town__buttons--bottom {
+        border-left: 0;
+        flex-direction: column;
+        row-gap: 4px;
+    }
+}
