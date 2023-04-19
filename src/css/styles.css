@@ -564,6 +564,10 @@ body {
     color: #969696;
 }
 
+.town__club.town__club--red {
+    color: #FF0000;
+}
+
 .town__content {
     display: flex;
     column-gap: 22px;
@@ -678,5 +682,6 @@ body {
         border-left: 0;
         flex-direction: column;
         row-gap: 4px;
+        justify-content: center;
     }
 }
