@@ -519,6 +519,10 @@ body {
     padding-top: 5px;
 }
 
+.empty_space {
+    width: 102px
+}
+
 .ticket_buy:hover {
     transform: scale(1.03);
     transition: all 0.3s ease-in-out;
@@ -626,7 +630,7 @@ body {
 }
 
 @media (max-width: 840px) {
-    .town__club {
+    .town__club, .empty_space {
         display: none;
     }
 
